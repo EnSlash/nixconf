@@ -4,7 +4,7 @@
         imports =
                [
         #               ./shell.nix
-               		#./flake.nix
+               		./hugo.nix
                ];
         nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
