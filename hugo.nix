@@ -6,22 +6,21 @@
   installShellFiles,
   buildPackages,
   testers,
-  nix-update-script,
   hugo,
 }:
 
 buildGoModule rec {
   pname = "hugo";
-  version = "0.136.5";
+  version = "0.126.1";
 
   src = fetchFromGitHub {
     owner = "gohugoio";
     repo = "hugo";
     rev = "refs/tags/v${version}";
-    hash = "sha256-NluV9/tqWTRfs2u9g4cHC1TyrxOXx3ghOZ4GDx7OZFo=";
+    hash = "sha256-c421kzgD6PFM/9Rn+NmZGyRlJPWhQPraW/4HcuRoEUU=";
   };
 
-  vendorHash = "sha256-KqDsa7MlSONyn7AYOepQ95q1CEM83AhWk23iYSQ4twU=";
+  vendorHash = "sha256-VfwiA5LCAJ1pkmMCy/Dcc5bLKkNY1MHtxHcHvKLoWHs=";
 
   doCheck = false;
 
@@ -58,11 +57,9 @@ buildGoModule rec {
     version = "v${version}";
   };
 
-  passthru.updateScript = nix-update-script { };
-
   meta = {
     changelog = "https://github.com/gohugoio/hugo/releases/tag/v${version}";
-    description = "Fast and modern static website engine";
+    description = "A fast and modern static website engine";
     homepage = "https://gohugo.io";
     license = lib.licenses.asl20;
     mainProgram = "hugo";
