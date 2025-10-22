@@ -13,10 +13,6 @@
       
       vendorHash = "sha256-VfwiA5LCAJ1pkmMCy/Dcc5bLKkNY1MHtxHcHvKLoWHs="; # Хеш вендор зависимостей
       
-      # Для Go пакетов также может потребоваться
-      #goModules = {
-      #  vendorHash = "";
-      #};
     }))
   ];
 }

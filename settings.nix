@@ -34,8 +34,6 @@
           pulse.enable = true;
         };
 
-
-
         # Install firefox.
         programs.firefox.enable = true;
 
@@ -85,9 +83,9 @@
                 tmux
                 eza
                 alacritty
-	            	asciinema
-	            	python313Packages.docopt
-	            	zimfw
+          	asciinema
+            	python313Packages.docopt
+            	zimfw
                 (python3.withPackages (ps: [
                   ps.netmiko
                 ]))
