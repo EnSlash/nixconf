@@ -42,6 +42,7 @@
         # Install soft
         environment.systemPackages = with pkgs; [
                 vlc
+		mtr
                 go
                 vim
                 wget
