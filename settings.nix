@@ -43,6 +43,7 @@
         environment.systemPackages = with pkgs; [
                 vlc
 		mtr
+		p7zip
                 go
                 vim
                 wget
