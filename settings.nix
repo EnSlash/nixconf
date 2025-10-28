@@ -4,6 +4,8 @@
         imports =
                [
                		./hugo.nix
+               		./gns3.nix
+
                ];
         nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
@@ -61,7 +63,6 @@
                 telegram-desktop
                 libreoffice
                 drawio
-                gns3-gui
                 zoom-us
                 git
                 wireshark
