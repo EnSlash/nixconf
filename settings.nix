@@ -44,8 +44,8 @@
         # Install soft
         environment.systemPackages = with pkgs; [
                 vlc
-		mtr
-		p7zip
+		            mtr
+		            p7zip
                 go
                 vim
                 wget
@@ -71,9 +71,9 @@
                 python313Full
                 kdePackages.dolphin
                 dig
-                python3Packages.pip
-                #python3Packages.netmiko
-                python3Packages.colorama
+                python313Packages.pip
+                python313Packages.netmiko 
+                python313Packages.colorama
                 neofetch
                 openssl
                 ipcalc
@@ -85,12 +85,12 @@
                 tmux
                 eza
                 alacritty
-          	asciinema
-            	python313Packages.docopt
-            	zimfw
-                (python3.withPackages (ps: [
-                  ps.netmiko
-                ]))
+          	    asciinema
+            	  python313Packages.docopt
+            	  zimfw
+                # (python313.withPackages (ps: [
+                #   ps.netmiko
+                # ]))
         ];
 
         fonts.packages = with pkgs; [
