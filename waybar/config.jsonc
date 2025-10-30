@@ -7,7 +7,7 @@
 
   "modules-right": [
     "network",
-    "pulseaudio/slider",
+    // "pulseaudio/slider",
     "pulseaudio",
     "custom/uptime",
     "backlight",

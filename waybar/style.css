@@ -9,19 +9,20 @@
 
 #waybar {
   background: transparent;
-  color: #c80ada;
+  color: #0ada26;
   margin: 2px 2px;
 }
 
 #workspaces {
-  border-radius: 5px;
+  border-radius: 50px;
   margin: 5px;
-  background: #101010;
+  background: #5a0d5a;
   margin-left: 2px;
+  color: #0ada26;
 }
 
 #workspaces button {
-  color: #babbf1;
+  color: #0ada26;
   border-radius: 5px;
   padding: 0.4rem;
 }
@@ -47,28 +48,26 @@ button {
 #battery,
 #network,
 #pulseaudio,
-#pulseaudio-slider,
 #cpu,
 #memory,
 #custom-lock,
 #custom-power,
 #custom-weather,
-#custom-uptime,
-#custom-docker {
-  background-color: #101010;
+#language,
+#custom-uptime {
+  background-color: #5a0d5a;
   padding: 0.5rem 1rem;
-  margin: 5px 0;
+  /* margin: 5px 0; */
+  border-radius: 50px;
 }
 
 #clock {
-  color: #c80ada;
-  border-radius: 5px;
+  color: #0ada26;
+
 }
 
 #custom-weather {
   color: #8caaee;
-  margin-left: 0.5rem;
-  border-radius: 5px;
 }
 
 #battery {
@@ -93,20 +92,21 @@ button {
 }
 
 #pulseaudio {
-  color: #c80ada;
-  border-radius: 5px 0px 0px 5px;
+  color: #0ada26;
+  border-radius: 50px;
 }
 
-#pulseaudio-slider {
+/* #pulseaudio-slider {
   color: #ea999c;
   background: #1A1826;
   min-width: 50px;
 }
 
-#pulseaudio-slider slider {}
+#pulseaudio-slider slider {} */
 
 #language {
   color: #06eb24;
+  border-radius: 50px;
 }
 
 #custom-music {
@@ -115,7 +115,7 @@ button {
 }
 
 #custom-lock {
-  color: #ec281a;
+  color: #0ada26;
 }
 
 #custom-power {
