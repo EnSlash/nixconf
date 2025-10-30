@@ -1,0 +1,103 @@
+{
+    "custom/arch": {
+        "format": "ˇ░úç",
+        "tooltip": true,
+        "tooltip-format": "btw"
+    },
+
+    "hyprland/workspaces": {
+        "disable-scroll": true,
+        "all-outputs": true,
+        "warp-on-scroll": false,
+        "format": "{name}",
+        "format-icons": {
+            "urgent": "´ü¬",
+            "active": "´ćĺ",
+            "default": "´äĹ"
+        }
+    },
+    
+    "network": {
+        "format-wifi": "´çź {essid} ({signalStrength}%)",
+        "format-ethernet": "{ipaddr}/{cidr} ´×ľ",
+        "tooltip-format": "{ifname} via {gwaddr} ´×ľ",
+        "format-linked": "{ifname} (No IP) ´×ľ",
+        "format-disconnected": "Disconnected ÔÜá",
+        "on-click": "sh ~/scripts/rofi-wifi-menu/rofi-wifi-menu.sh"
+    },
+    
+    "custom/net-speed": {
+        "format": "´çĄ {}",
+        "interval": 1,
+        "exec": "sh -c \"echo '▲ '$(python -c 'import psutil; print(round(psutil.net_io_counters().bytes_sent / 1024 / 1024, 1))')'MB ▼ '$(python -c 'import psutil; print(round(psutil.net_io_counters().bytes_recv / 1024 / 1024, 1))')'MB'\"",
+        "tooltip": false
+    },
+    
+    "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "format-bluetooth": "{icon} {volume}% ´Őö {format_source}",
+        "format-bluetooth-muted": "´Üę {icon}´Őö {format_source}",
+        "format-muted": "´Üę {format_source}",
+        "format-source": "´ä░ {volume}%",
+        "format-source-muted": "´ä▒",
+        "format-icons": {
+            "headphone": "´Çą",
+            "hands-free": "´ľÉ",
+            "headset": "´ľÉ",
+            "phone": "´éĽ",
+            "portable": "´éĽ",
+            "car": "´ć╣",
+            "default": ["´ÇŽ", "´Çž", "´ÇĘ"]
+        },
+        "on-click": "pavucontrol"
+    },
+    
+    "cpu": {
+        "format": "´őŤ {usage}%",
+        "tooltip": true,
+        "interval": 2
+    },
+    
+    "memory": {
+        "format": "´âë {}%",
+        "tooltip": true,
+        "interval": 2
+    },
+    
+    "temperature": {
+        "interval": 10,
+        "hwmon-path": "/sys/devices/platform/coretemp.0/hwmon/hwmon4/temp1_input",
+        "critical-threshold": 100,
+        "format-critical": "´őç {temperatureC}",
+        "format": "´őë {temperatureC}┬░C"
+    },
+    
+    "hyprland/language": {
+        "format": "´éČ {}",
+        "format-en": "EN",
+        "format-ru": "RU"
+    },
+    
+    "battery": {
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{icon} {capacity}%",
+        "format-full": "{icon} {capacity}%",
+        "format-charging": "´Śž {capacity}%",
+        "format-plugged": "´çŽ {capacity}%",
+        "format-alt": "{time} {icon}",
+        "format-icons": ["´ëä", "´ëâ", "´ëé", "´ëü", "´ëÇ"]
+    },
+    
+    "battery#bat2": {
+        "bat": "BAT2"
+    },
+    
+    "clock": {
+        "format": "{:%H:%M | %e %B}",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "format-alt": "{:%Y-%m-%d}"
+    }
+}

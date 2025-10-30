@@ -88,6 +88,11 @@
           	    asciinema
             	  python313Packages.docopt
             	  zimfw
+                wireplumber
+                wlogout
+                playerctl
+                nerd-fonts.jetbrains-mono
+                pavucontrol
                 # (python313.withPackages (ps: [
                 #   ps.netmiko
                 # ]))
