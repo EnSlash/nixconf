@@ -5,6 +5,7 @@
                [
                		./hugo.nix
                		./gns3.nix
+               	  ./hyprland.nix
 
                ];
         nix.settings.experimental-features = [ "nix-command" "flakes" ];
@@ -15,7 +16,7 @@
         
         # Enable the X11 windowing system.
         services.xserver.enable = true;
-
+        services.flatpak.enable = true;
         services.xserver.xkb = {
           layout = "us";
           variant = "";
@@ -39,7 +40,9 @@
         programs.firefox.enable = true;
 
         # Install Hyprland
-        programs.hyprland.enable = true;
+        # programs.hyprland = {
+        #   enable = true;
+        # };
 
         # Install soft
         environment.systemPackages = with pkgs; [
@@ -93,6 +96,8 @@
                 playerctl
                 nerd-fonts.jetbrains-mono
                 pavucontrol
+                xdg-desktop-portal-hyprland
+                xdg-desktop-portal-wlr
                 # (python313.withPackages (ps: [
                 #   ps.netmiko
                 # ]))
