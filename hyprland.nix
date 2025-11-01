@@ -8,7 +8,7 @@
         owner = "hyprwm";
         repo = "Hyprland";
         rev = "v0.51.1";
-        hash = "" ; # Нужно вычислить
+        hash = "sha256-eLU5Zo1L3IFr8LgOsvTcoYW04/K+Sb8OvpwbaTSTGF4=" ; # Нужно вычислить
       };
       
       vendorHash = ""; # Хеш вендор зависимостей
