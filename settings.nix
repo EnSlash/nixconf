@@ -76,7 +76,7 @@
                 wireshark
                 zsh
                 mercurial
-                python
+                python313Packages.python
                 kdePackages.dolphin
                 dig
                 # python313Packages.pip
