@@ -39,9 +39,9 @@
         programs.firefox.enable = true;
 
         # Install Hyprland
-        # programs.hyprland = {
-        #   enable = true;
-        # };
+        programs.hyprland = {
+          enable = true;
+        };
 
         # Install soft
         environment.systemPackages = with pkgs; [
