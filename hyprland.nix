@@ -2,7 +2,7 @@
 
 {
   environment.systemPackages = [
-    (pkgs.Hyprland.overrideAttrs (old: {
+    (pkgs.hyprland.overrideAttrs (old: {
       version = "0.51.1";
       src = pkgs.fetchFromGitHub {
         owner = "hyprwm";
