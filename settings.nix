@@ -41,7 +41,7 @@
         # Install Hyprland
         programs.hyprland = {
               enable = true;
-              xwayland.enable = true; # Xwayland can be disabled.
+              # xwayland.enable = true; # Xwayland can be disabled.
               # # Use Hyprland from flake to get latest version (0.51.x+) for portal/screensharing fixes
               # # nixpkgs-unstable has build issues and outdated 0.49.0 version
               # package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
