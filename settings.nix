@@ -46,7 +46,7 @@
               # # nixpkgs-unstable has build issues and outdated 0.49.0 version
               # package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
               # portalPackage = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
-              withUWSM = false; # testing
+              # withUWSM = false; # testing
             };
 
         # Install soft
