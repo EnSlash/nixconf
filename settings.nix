@@ -16,7 +16,6 @@
         
         # Enable the X11 windowing system.
         services.xserver.enable = true;
-        services.flatpak.enable = true;
         services.xserver.xkb = {
           layout = "us";
           variant = "";
