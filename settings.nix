@@ -5,7 +5,7 @@
                [
                		./hugo.nix
                		./gns3.nix
-               	  ./hyprland.nix
+               	  #./hyprland.nix
 
                ];
         nix.settings.experimental-features = [ "nix-command" "flakes" ];
