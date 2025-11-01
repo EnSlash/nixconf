@@ -76,11 +76,11 @@
                 wireshark
                 zsh
                 mercurial
-                python313Full
+                python
                 kdePackages.dolphin
                 dig
-                python313Packages.pip
-                python313Packages.netmiko 
+                # python313Packages.pip
+                # python313Packages.netmiko 
                 python313Packages.colorama
                 neofetch
                 openssl
