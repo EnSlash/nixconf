@@ -5,6 +5,8 @@
                [
                		./hugo.nix
                		./gns3.nix
+                  ./stable.nix
+                  #./i3lock.nix
                ];
         nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
@@ -76,14 +78,14 @@
                 curl
                 gnupg
                 wofi
-                waybar
+                #waybar
                 htop
                 vscode
                 zip
                 unzip
                 busybox
                 keepassxc
-                winbox4
+                #winbox4
                 telegram-desktop
                 libreoffice
                 drawio
@@ -95,17 +97,10 @@
                 python313Packages.python
                 kdePackages.dolphin
                 dig
-                # python313Packages.pip
-                # python313Packages.netmiko 
                 python313Packages.colorama
                 neofetch
                 openssl
                 ipcalc
-                #hypridle
-                #hyprlang
-                #hyprlock
-                #hyprpaper
-                #hyprshot
                 tmux
                 eza
                 alacritty
@@ -117,12 +112,9 @@
                 playerctl
                 nerd-fonts.jetbrains-mono
                 pavucontrol
-                i3
-               # xdg-desktop-portal-hyprland
-               # xdg-desktop-portal-wlr
-                # (python313.withPackages (ps: [
-                #   ps.netmiko
-                # ]))
+                i3lock-fancy
+                xss-lock
+                xautolock             
         ];
 
         fonts.packages = with pkgs; [
