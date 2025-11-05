@@ -5,8 +5,6 @@
                [
                		./hugo.nix
                		./gns3.nix
-               	  #./hyprland.nix
-
                ];
         nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
@@ -15,12 +13,35 @@
         #time.timeZone = "Asia/Yekaterinburg";
         
         # Enable the X11 windowing system.
-        services.xserver.enable = true;
+       # services.xserver.enable = true;
         services.xserver.xkb = {
           layout = "us";
           variant = "";
         };
       
+
+	environment.pathsToLink = [ "/libexec" ]; # links /libexec from derivations to /run/current-system/sw 
+  	services.xserver = {
+    		enable = true;
+	
+    		desktopManager = {
+      		xterm.enable = false;
+    	};
+   
+    	windowManager.i3 = {
+      		enable = true;
+      		extraPackages = with pkgs; [
+        		dmenu #application launcher most people use
+        		i3status # gives you the default i3 status bar
+        		i3blocks #if you are planning on using i3blocks over i3status
+    			 ];
+    		};
+  	};
+
+  	services.displayManager.defaultSession = "none+i3";
+
+  	programs.i3lock.enable = true; #default i3 screen locker
+
 
         # Enable CUPS to print documents.
         services.printing.enable = true;
@@ -39,9 +60,9 @@
         programs.firefox.enable = true;
 
         # Install Hyprland
-        programs.hyprland = {
-              enable = true;
-            };
+#        programs.hyprland = {
+#              enable = true;
+#            };
 
         # Install soft
         environment.systemPackages = with pkgs; [
@@ -80,24 +101,25 @@
                 neofetch
                 openssl
                 ipcalc
-                hypridle
-                hyprlang
-                hyprlock
-                hyprpaper
-                hyprshot
+                #hypridle
+                #hyprlang
+                #hyprlock
+                #hyprpaper
+                #hyprshot
                 tmux
                 eza
                 alacritty
-          	    asciinema
-            	  python313Packages.docopt
-            	  zimfw
+                asciinema
+                python313Packages.docopt
+                zimfw
                 wireplumber
                 wlogout
                 playerctl
                 nerd-fonts.jetbrains-mono
                 pavucontrol
-                xdg-desktop-portal-hyprland
-                xdg-desktop-portal-wlr
+                i3
+               # xdg-desktop-portal-hyprland
+               # xdg-desktop-portal-wlr
                 # (python313.withPackages (ps: [
                 #   ps.netmiko
                 # ]))
