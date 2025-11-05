@@ -7,6 +7,7 @@
                		./gns3.nix
                   ./stable.nix
                   #./i3lock.nix
+                  #./winbox.nix
                ];
         nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
@@ -66,6 +67,9 @@
 #              enable = true;
 #            };
 
+        nixpkgs.config.allowUnfree = true;
+
+
         # Install soft
         environment.systemPackages = with pkgs; [
                 vlc
@@ -78,14 +82,13 @@
                 curl
                 gnupg
                 wofi
-                #waybar
                 htop
                 vscode
                 zip
                 unzip
                 busybox
                 keepassxc
-                #winbox4
+                winbox4
                 telegram-desktop
                 libreoffice
                 drawio
@@ -126,6 +129,4 @@
           enable = true;
           enableSSHSupport = true;
         };
-
-        nixpkgs.config.allowUnfree = true;
 }
