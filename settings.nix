@@ -114,12 +114,19 @@
                 pavucontrol
                 i3lock-fancy
                 xss-lock
-                xautolock             
+                xautolock
+                i3lock-color
+                imagemagick
+                dejavu_fonts
+                flameshot
+                betterlockscreen
+                feh
         ];
 
         fonts.packages = with pkgs; [
           font-awesome
           nerd-fonts.caskaydia-cove
+          dejavu_fonts
         ];
 
         programs.gnupg.agent = {

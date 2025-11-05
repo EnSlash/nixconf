@@ -1,0 +1,8 @@
+# Конфигурация i3lock-fancy (импортируется скриптом ~/.local/bin/lock)
+# 1 — включить, 0 — выключить
+FONT="DejaVu Sans"
+TEXT="Введите пароль для разблокировки"
+GREYSCALE=0
+PIXELATE=0
+DESKTOP=0
+NOFORK=1
