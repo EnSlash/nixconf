@@ -5,9 +5,6 @@
                [
                		./hugo.nix
                		./gns3.nix
-                  ./stable.nix
-                  #./i3lock.nix
-                  #./winbox.nix
                ];
         nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
@@ -73,9 +70,9 @@
         # Install soft
         environment.systemPackages = with pkgs; [
                 vlc
-		            mtr
+	        mtr
                 code-cursor
-		            p7zip
+	        p7zip
                 go
                 vim
                 wget
