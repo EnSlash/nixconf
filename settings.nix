@@ -65,14 +65,18 @@
 #            };
 
         nixpkgs.config.allowUnfree = true;
-
+        # Включить системный трей
+        #services.tray.enable = true;
+        
+        # Включить D-Bus (обязательно для трея)
+        services.dbus.enable = true;
 
         # Install soft
         environment.systemPackages = with pkgs; [
                 vlc
-	        mtr
+	              mtr
                 code-cursor
-	        p7zip
+	              p7zip
                 go
                 vim
                 wget
@@ -121,6 +125,12 @@
                 flameshot
                 betterlockscreen
                 feh
+                networkmanagerapplet
+                pasystray
+                blueman
+                stalonetray
+                trayer
+                polybarFull
         ];
 
         fonts.packages = with pkgs; [

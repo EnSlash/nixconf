@@ -23,6 +23,8 @@ font pango:CaskaydiaCove Nerd Font 11
 # https://wiki.archlinux.org/index.php/XDG_Autostart
 exec --no-startup-id dex --autostart --environment i3
 
+exec_always --no-startup-id "setxkbmap -model pc105 -layout us,ru -option grp:alt_shift_toggle"
+
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
 # they are included here as an example. Modify as you see fit.
 
@@ -34,7 +36,11 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 # and nm-applet is a desktop environment-independent system tray GUI for it.
 exec --no-startup-id nm-applet
 
+exec_always --no-startup-id ~/.config/polybar/launch.sh
+
 exec --no-startup-id feh --bg-fill /home/iershov/.config/hypr/desk.jpg
+# Ensure SNI (AppIndicator) icons appear in i3bar (XEmbed bridge)
+exec_always --no-startup-id xembedsniproxy
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
@@ -65,7 +71,7 @@ bindsym $mod+d exec --no-startup-id dmenu_run
 
 # change focus
 bindsym $mod+j focus left
-bindsym $mod+k focus down
+#bindsym $mod+k focus down
 #bindsym $mod+l focus up
 bindsym $mod+semicolon focus right
 
@@ -91,14 +97,14 @@ bindsym $mod+Shift+Right move right
 bindsym $mod+h split h
 
 # split in vertical orientation
-bindsym $mod+v split v
+bindsym $mod+Ctrl+v split v
 
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
 bindsym $mod+s layout stacking
-bindsym $mod+w layout tabbed
+#bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
 
 # toggle tiling / floating
@@ -113,28 +119,28 @@ bindsym $mod+a focus parent
 # focus the child container
 #bindsym $mod+d focus child
 
-bindsym $mod+Ctrl+f exec firefox
-bindsym $mod+Ctrl+v exec code
-bindsym $mod+Ctrl+c exec cursor
-bindsym $mod+Ctrl+k exec keepassxc
-bindsym $mod+Ctrl+w exec WinBox
-bindsym $mod+Ctrl+t exec Telegram
+bindsym $mod+b exec firefox
+bindsym $mod+v exec code
+bindsym $mod+c exec cursor
+bindsym $mod+k exec keepassxc
+bindsym $mod+w exec WinBox
+bindsym $mod+t exec telegram-desktop
 bindsym $mod+Ctrl+e exec dolphin
 
 bindsym $mod+l exec betterlockscreen -l dim
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
-set $ws1 "1: "
-set $ws2 "2: "
-set $ws3 "3: "
-set $ws4 "4: "
-set $ws5 "5: "
-set $ws6 "6: "
-set $ws7 "7: "
-set $ws8 "8: "
-set $ws9 "9: "
-set $ws10 "10: "
+set $ws1 "1: "
+set $ws2 "2: "
+set $ws3 "3: "
+set $ws4 "4: "
+set $ws5 "5: "
+set $ws6 "6: "
+set $ws7 "7: "
+set $ws8 "8: "
+set $ws9 "9: "
+set $ws10 "10: "
 
 # switch to workspace
 bindsym $mod+1 workspace number $ws1
@@ -196,24 +202,7 @@ bindsym $mod+r mode "resize"
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
-bar {
-        status_command i3status
-        position top
-        tray_output primary
-        height 28
-        separator_symbol ""
-        font pango:CaskaydiaCove Nerd Font 13
-        strip_workspace_numbers yes
-        tray_padding 3
-        colors {
-                background #1e1e2e
-                statusline #cdd6f4
-                separator  #45475a
-
-                focused_workspace  #89b4fa #89b4fa #1e1e2e
-                active_workspace   #313244 #313244 #cdd6f4
-                inactive_workspace #181825 #181825 #a6adc8
-                urgent_workspace   #f38ba8 #f38ba8 #1e1e2e
-                binding_mode       #f9e2af #f9e2af #1e1e2e
-        }
-}
+# bar {
+#     status_command i3status
+#     tray_output primary
+# }
