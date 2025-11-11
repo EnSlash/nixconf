@@ -98,10 +98,11 @@
                 wireshark
                 zsh
                 mercurial
-                python313Packages.python
                 kdePackages.dolphin
                 dig
+                python313Full
                 python313Packages.colorama
+                python313Packages.netmiko
                 neofetch
                 openssl
                 ipcalc
@@ -128,9 +129,8 @@
                 networkmanagerapplet
                 pasystray
                 blueman
-                stalonetray
-                trayer
                 polybarFull
+                gemini-cli
         ];
 
         fonts.packages = with pkgs; [
