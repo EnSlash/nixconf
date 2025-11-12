@@ -65,8 +65,6 @@
 #            };
 
         nixpkgs.config.allowUnfree = true;
-        # Включить системный трей
-        #services.tray.enable = true;
         
         # Включить D-Bus (обязательно для трея)
         services.dbus.enable = true;
@@ -100,9 +98,11 @@
                 mercurial
                 kdePackages.dolphin
                 dig
-                python313Full
-                python313Packages.colorama
-                python313Packages.netmiko
+                python313
+                # python313Packages.colorama
+                # python313Packages.netmiko
+                # python313Packages.docopt
+                # python313Packages.pip
                 neofetch
                 openssl
                 ipcalc
@@ -110,7 +110,6 @@
                 eza
                 alacritty
                 asciinema
-                python313Packages.docopt
                 zimfw
                 wireplumber
                 wlogout
@@ -131,7 +130,18 @@
                 blueman
                 polybarFull
                 gemini-cli
-        ];
+              #   (python313.withPackages (ps: with ps; [
+              #           ntc-templates
+              #           paramiko
+              #           pyserial
+              #           pyyaml
+              #           rich
+              #           ruamel-yaml
+              #           scp
+              #           textfsm
+              #           netmiko
+              # ]))
+  ];
 
         fonts.packages = with pkgs; [
           font-awesome
