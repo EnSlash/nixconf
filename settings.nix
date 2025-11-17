@@ -5,6 +5,7 @@
                [
                		./hugo.nix
                		./gns3.nix
+                  ./unstable.nix
                ];
         nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
@@ -68,12 +69,14 @@
         
         # Включить D-Bus (обязательно для трея)
         services.dbus.enable = true;
+        
+        # Docker
+        virtualisation.docker.enable = true;
 
         # Install soft
         environment.systemPackages = with pkgs; [
                 vlc
 	              mtr
-                code-cursor
 	              p7zip
                 go
                 vim
@@ -82,7 +85,6 @@
                 gnupg
                 wofi
                 htop
-                vscode
                 zip
                 unzip
                 busybox
@@ -130,6 +132,8 @@
                 blueman
                 polybarFull
                 gemini-cli
+                docker
+                docker-compose
               #   (python313.withPackages (ps: with ps; [
               #           ntc-templates
               #           paramiko
