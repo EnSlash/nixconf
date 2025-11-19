@@ -9,6 +9,9 @@ in
   environment.systemPackages = with unstable; [
     vscode
     code-cursor
+    gemini-cli
+    zoom-us
+
   ];
 
 }

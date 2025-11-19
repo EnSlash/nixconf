@@ -93,7 +93,6 @@
                 telegram-desktop
                 libreoffice
                 drawio
-                zoom-us
                 git
                 wireshark
                 zsh
@@ -131,7 +130,6 @@
                 pasystray
                 blueman
                 polybarFull
-                gemini-cli
                 docker
                 docker-compose
               #   (python313.withPackages (ps: with ps; [
