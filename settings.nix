@@ -89,7 +89,6 @@
                 unzip
                 busybox
                 keepassxc
-                winbox4
                 telegram-desktop
                 libreoffice
                 drawio
@@ -100,10 +99,6 @@
                 kdePackages.dolphin
                 dig
                 python313
-                # python313Packages.colorama
-                # python313Packages.netmiko
-                # python313Packages.docopt
-                # python313Packages.pip
                 neofetch
                 openssl
                 ipcalc
@@ -132,17 +127,6 @@
                 polybarFull
                 docker
                 docker-compose
-              #   (python313.withPackages (ps: with ps; [
-              #           ntc-templates
-              #           paramiko
-              #           pyserial
-              #           pyyaml
-              #           rich
-              #           ruamel-yaml
-              #           scp
-              #           textfsm
-              #           netmiko
-              # ]))
   ];
 
         fonts.packages = with pkgs; [
