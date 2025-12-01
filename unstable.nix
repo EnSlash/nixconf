@@ -25,6 +25,7 @@ let
       code-cursor
       gemini-cli
       zoom-us
+      winbox4
 
       dvPythonEnvTest
     ];

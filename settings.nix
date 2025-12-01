@@ -127,6 +127,8 @@
                 polybarFull
                 docker
                 docker-compose
+                nodejs_24
+                onlyoffice-desktopeditors
   ];
 
         fonts.packages = with pkgs; [
