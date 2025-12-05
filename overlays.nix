@@ -10,7 +10,7 @@
 
   # Your Python package
   dvPythonEnvTest = unstable.python313.withPackages (ps: with ps; [
-    #ciscoconfparse2
+    ciscoconfparse2
     ntc-templates
     netmiko
     colorama

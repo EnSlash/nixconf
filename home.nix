@@ -23,8 +23,8 @@
     source = ./polybar/launch.sh;
     executable = true;
   };
-  home.file."configs/.bashrc".source = ./.bashrc;
-  home.file."configs/.tmux.conf".source = ./.tmux.conf;
+  home.file.".bashrc".source = ./configs/.bashrc;
+  home.file.".tmux.conf".source = ./configs/.tmux.conf;
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
