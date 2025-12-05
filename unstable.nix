@@ -15,7 +15,8 @@ let
       ntc-templates
       netmiko
       colorama
-      aiofiles                                                                                                                                                                      
+      aiofiles   
+      tabulate                                                                                                                                                                   
     ]);
 
   in

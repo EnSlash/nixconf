@@ -1,6 +1,7 @@
 { config, pkgs, ... }:
 
 {
+    boot.kernelParams = [ "acpi=strict" ];
         imports =
                [
                		./hugo.nix
@@ -76,8 +77,8 @@
         # Install soft
         environment.systemPackages = with pkgs; [
                 vlc
-	              mtr
-	              p7zip
+                mtr
+                p7zip
                 go
                 vim
                 wget
