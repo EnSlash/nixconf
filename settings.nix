@@ -12,8 +12,8 @@ in
     ./packages.nix
     ./services.nix
     ./desktop.nix
-    ./hugo.nix
-    ./gns3.nix
+    ./castom/hugo.nix
+    ./castom/gns3.nix
     (import "${home-manager-src}/nixos")
   ];
 
