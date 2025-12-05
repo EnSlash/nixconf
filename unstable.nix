@@ -10,14 +10,14 @@ let
   };
 
 
-    dvPythonEnvTest = pkgs.python313.withPackages (ps: with ps; [                                                                                                                                                                                
-      ciscoconfparse2                                                                                                                                                                                                                            
+    dvPythonEnvTest = pkgs.python313.withPackages (ps: with ps; [
+      ciscoconfparse2
       ntc-templates
       netmiko
       colorama
       aiofiles   
-      tabulate                                                                                                                                                                   
-    ]);
+      tabulate
+      ]);
 
   in
   {
