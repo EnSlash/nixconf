@@ -36,7 +36,7 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 # and nm-applet is a desktop environment-independent system tray GUI for it.
 exec --no-startup-id nm-applet
 
-exec_always --no-startup-id ~/.config/polybar/launch.sh
+exec_always --no-startup-id bash ~/.config/polybar/launch.sh
 
 exec --no-startup-id feh --bg-fill ~/.config/hypr/desk.jpg
 # Ensure SNI (AppIndicator) icons appear in i3bar (XEmbed bridge)
