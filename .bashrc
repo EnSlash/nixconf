@@ -14,8 +14,10 @@ export QT_AUTO_SCREEN_SCALE_FACTOR=1
 # Для гибридной графики
 export __GL_THREADED_OPTIMIZATIONS=1
 
-setxkbmap -model pc105 -layout us,ru -option grp:alt_shift_toggle
+if [[ $- == *i* ]]; then
+    setxkbmap -model pc105 -layout us,ru -option grp:alt_shift_toggle
+    neofetch
+fi
 
-neofetch
 export PATH="$HOME/.local/bin:$PATH"
 
