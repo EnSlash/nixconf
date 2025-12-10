@@ -64,6 +64,8 @@
     zoom-us
     winbox4
     dvPythonEnvTest
+    tcpdump
+    iperf2
   ];
 
   fonts.packages = with pkgs; [
