@@ -42,6 +42,7 @@
     nerd-fonts.jetbrains-mono
     pavucontrol
     xss-lock
+    xautolock
     xsecurelock
     imagemagick
     dejavu_fonts

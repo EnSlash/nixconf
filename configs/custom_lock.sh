@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-export XSECURELOCK_SAVER="saver_protector"
-export XSECURELOCK_AUTH="auth_x11"
+export XSECURELOCK_SAVER="saver_swarm"
+export XSECURELOCK_AUTH="$(which auth_x11)"
 export XSECURELOCK_PASSWORD_PROMPT="default"
 export XSECURELOCK_SHOW_DATETIME="1"
 export XSECURELOCK_DATETIME_FORMAT="%A, %d %B %Y %H:%M:%S"
