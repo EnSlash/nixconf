@@ -53,6 +53,7 @@
     networkmanagerapplet
     pasystray
     blueman
+    bluez-tools
     polybarFull
     docker
     docker-compose
@@ -66,6 +67,7 @@
     dvPythonEnvTest
     tcpdump
     iperf2
+    btop
   ];
 
   fonts.packages = with pkgs; [
