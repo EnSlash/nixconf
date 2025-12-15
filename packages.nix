@@ -41,14 +41,11 @@
     playerctl
     nerd-fonts.jetbrains-mono
     pavucontrol
-    i3lock-fancy
     xss-lock
-    xautolock
-    i3lock-color
+    xsecurelock
     imagemagick
     dejavu_fonts
     flameshot
-    betterlockscreen
     feh
     networkmanagerapplet
     pasystray

@@ -30,7 +30,7 @@ exec_always --no-startup-id "setxkbmap -model pc105 -layout us,ru -option grp:al
 
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
-exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
+exec --no-startup-id xss-lock --transfer-sleep-lock -- /home/iershov/.config/custom_lock.sh
 
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
@@ -127,7 +127,7 @@ bindsym $mod+w exec WinBox
 bindsym $mod+t exec telegram-desktop
 bindsym $mod+Ctrl+e exec dolphin
 
-bindsym $mod+l exec betterlockscreen -l dim
+bindsym $mod+l exec /home/iershov/.config/custom_lock.sh
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
