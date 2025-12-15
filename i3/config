@@ -39,7 +39,7 @@ exec --no-startup-id nm-applet
 
 exec_always --no-startup-id bash ~/.config/polybar/launch.sh
 
-exec --no-startup-id feh --bg-fill ~/.config/hypr/desk.jpg
+exec --no-startup-id feh --bg-fill ~/.config/i3/desk.jpg
 # Ensure SNI (AppIndicator) icons appear in i3bar (XEmbed bridge)
 exec_always --no-startup-id xembedsniproxy
 # Use pactl to adjust volume in PulseAudio.

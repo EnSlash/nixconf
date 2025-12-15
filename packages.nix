@@ -45,7 +45,6 @@
     xautolock
     xsecurelock
     imagemagick
-    dejavu_fonts
     flameshot
     feh
     networkmanagerapplet

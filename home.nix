@@ -18,6 +18,7 @@
 
   # The home.file option allows you to manage files in your home directory.
   home.file.".config/i3/config".source = ./i3/config;
+  home.file.".config/i3/desk.jpg".source = ./i3/desk.jpg;
   home.file.".config/polybar/config.ini".source = ./polybar/config.ini;
     home.file.".config/polybar/launch.sh" = {
     source = ./polybar/launch.sh;
