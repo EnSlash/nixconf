@@ -19,7 +19,6 @@ in
 
   home-manager.users.iershov = import ./home.nix;
 
-  home-manager.backupFileExtension = "backup";
 
 
   nixpkgs.overlays = [ (import ./overlays.nix { unstable = unstable; }) ];
@@ -27,10 +26,7 @@ in
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
   networking.networkmanager.enable = true;
   nixpkgs.config.allowUnfree = true;
-  nix.gc = {
-    automatic = true;
-    dates = "weekly";
-  };
+
   boot.kernelParams = [ "acpi=strict" ];
   environment.pathsToLink = [ "/libexec" ]; # links /libexec from derivations to /run/current-system/sw
 }

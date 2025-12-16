@@ -7,9 +7,7 @@ alias upg='sudo nixos-rebuild switch'
 alias l="exa -lag"
 alias kb="setxkbmap -model pc105 -layout us,ru -option grp:alt_shift_toggle"
 
-export QT_QPA_PLATFORM=wayland
-export QT_QPA_PLATFORMTHEME=qt5ct
-export QT_AUTO_SCREEN_SCALE_FACTOR=1
+
 
 # Для гибридной графики
 export __GL_THREADED_OPTIMIZATIONS=1

@@ -1,7 +1,12 @@
 # /home/iershov/git/nixconf/home.nix
-{ config, pkgs, ... }:
+{ ... }:
 
 {
+  imports = [
+    ./home/packages.nix
+    ./home/files.nix
+  ];
+
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
   home.username = "iershov";
@@ -15,22 +20,6 @@
   # the Home Manager release notes for a list of state version
   # changes in each release.
   home.stateVersion = "25.05"; # Please change this to your version of Home Manager
-
-  # The home.file option allows you to manage files in your home directory.
-  home.file.".config/i3/config".source = ./i3/config;
-  home.file.".config/i3/desk.jpg".source = ./i3/desk.jpg;
-  home.file.".config/polybar/config.ini".source = ./polybar/config.ini;
-    home.file.".config/polybar/launch.sh" = {
-    source = ./polybar/launch.sh;
-    executable = true;
-  };
-  home.file.".bashrc".source = ./configs/.bashrc;
-  home.file.".tmux.conf".source = ./configs/.tmux.conf;
-
-  home.file.".config/custom_lock.sh" = {
-    source = ./configs/custom_lock.sh;
-    executable = true;
-  };
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
