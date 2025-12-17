@@ -65,6 +65,7 @@
     tcpdump
     iperf2
     btop
+    Yazi
   ];
 
   fonts.packages = with pkgs; [
