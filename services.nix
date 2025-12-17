@@ -37,7 +37,7 @@
       fi
 
       # For home-manager profile
-      HOME_PROFILE="/home/${config.home.username}/.nix-profile"
+      HOME_PROFILE="/home/iershov/.nix-profile"
       GENS_TO_DELETE_HOME=$(${pkgs.nix}/bin/nix-env --list-generations --profile "$HOME_PROFILE" | ${pkgs.gawk}/bin/awk '{print $1}' | ${pkgs.coreutils}/bin/head -n -10 | ${pkgs.coreutils}/bin/tr '\n' ' ')
       if [ -n "$GENS_TO_DELETE_HOME" ]; then
         # This needs to run as the user
