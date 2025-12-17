@@ -41,7 +41,7 @@
       GENS_TO_DELETE_HOME=$(${pkgs.nix}/bin/nix-env --list-generations --profile "$HOME_PROFILE" | ${pkgs.gawk}/bin/awk '{print $1}' | ${pkgs.coreutils}/bin/head -n -10 | ${pkgs.coreutils}/bin/tr '\n' ' ')
       if [ -n "$GENS_TO_DELETE_HOME" ]; then
         # This needs to run as the user
-        sudo -u ${config.home.username} ${pkgs.nix}/bin/nix-env --delete-generations $GENS_TO_DELETE_HOME --profile "$HOME_PROFILE"
+        sudo -u iershov ${pkgs.nix}/bin/nix-env --delete-generations $GENS_TO_DELETE_HOME --profile "$HOME_PROFILE"
       fi
 
       # Run garbage collector to free up space
