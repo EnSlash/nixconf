@@ -15,4 +15,9 @@
     source = ../configs/custom_lock.sh;
     executable = true;
   };
+
+  home.file.".config/wofi" = {
+    source = ../configs/wofi;
+    recursive = true;
+  };
 }

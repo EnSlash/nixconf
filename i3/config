@@ -62,8 +62,9 @@ bindsym $mod+Return exec alacritty
 # kill focused window
 bindsym $mod+Shift+q kill
 
-# start dmenu (a program launcher)
-bindsym $mod+d exec --no-startup-id dmenu_run
+# start wofi (a program launcher)
+# -n flag is used to run wofi in a normal window on X11
+bindsym $mod+d exec "wofi -n --show drun"
 # A more modern dmenu replacement is rofi:
 # bindcode $mod+40 exec "rofi -modi drun,run -show drun"
 # There also is i3-dmenu-desktop which only displays applications shipping a
