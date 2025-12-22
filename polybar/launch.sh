@@ -9,7 +9,11 @@ while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
 # Запуск Polybar на всех подключенных мониторах
 if type "xrandr"; then
   for m in $(xrandr --query | grep " connected" | cut -d" " -f1); do
-    MONITOR=$m polybar --reload main &
+    if [ "$m" = "DP-1" ]; then
+      MONITOR=$m polybar --reload main_scaled &
+    else
+      MONITOR=$m polybar --reload main &
+    fi
   done
 else
   polybar --reload main &

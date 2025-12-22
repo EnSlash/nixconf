@@ -9,6 +9,7 @@
 
   services.xserver = {
     enable = true;
+    videoDrivers = [ "modesetting" ];
 
     desktopManager = {
       xterm.enable = false;
