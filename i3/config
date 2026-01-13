@@ -38,6 +38,7 @@ exec --no-startup-id xautolock -time 3 -locker "~/.config/custom_lock.sh"
 exec --no-startup-id nm-applet
 
 exec_always --no-startup-id bash ~/.config/polybar/launch.sh
+exec_always --no-startup-id xrandr --output HDMI-2 --primary --mode 1920x1080 --output HDMI-3 --mode 1920x1080 --right-of HDMI-2
 
 exec --no-startup-id feh --bg-fill ~/.config/i3/desk.jpg
 # Ensure SNI (AppIndicator) icons appear in i3bar (XEmbed bridge)

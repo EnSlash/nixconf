@@ -1,10 +1,11 @@
 { pkgs, ... }:
 
 {
-  home.packages = with pkgs; [
-    nsxiv
-    mpv
-    cmatrix
-    xterm
+  home.packages = [
+    pkgs.nsxiv
+    pkgs.mpv
+    pkgs.cmatrix
+    pkgs.xterm
+    pkgs.dvPythonEnvTest
   ];
 }

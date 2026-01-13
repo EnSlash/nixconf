@@ -65,6 +65,7 @@
     tcpdump
     iperf2
     btop
+    yandex-music
   ];
 
   fonts.packages = with pkgs; [

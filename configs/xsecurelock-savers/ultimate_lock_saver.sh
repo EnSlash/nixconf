@@ -38,7 +38,7 @@ xterm -geometry 100x40 -fa 'Monospace' -fs 14 -bg "rgba:0/0/0/0.5" -fg green -e 
 # --- Component 3: Status Bar ---
 # This runs a simple clock in an xterm at the bottom of the screen.
 # The geometry '200x1+0-0' makes it wide and places it at the bottom.
-xterm -geometry 200x1+0-0 -fa 'Monospace' -fs 12 -bg "rgba:0/0/0/0.7" -fg white -e "while true; do date; sleep 1; done" &
+xterm -geometry 100x1+0-0 -fa 'Monospace' -fs 12 -bg "rgba:0/0/0/0.7" -fg white -e "while true; do date; sleep 1; done" &
 
 
 # --- Keep the script running ---
