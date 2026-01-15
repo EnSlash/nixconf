@@ -65,6 +65,7 @@
     tcpdump
     iperf2
     btop
+    minicom
     yandex-music
   ];
 
