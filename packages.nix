@@ -67,6 +67,19 @@
     btop
     minicom
     yandex-music
+    neovim
+    vimPlugins.nord-vim
+    vimPlugins.nvim-scrollview
+    vimPlugins.vim-fugitive
+    vimPlugins.lightline-vim
+    vimPlugins.tiny-devicons-auto-colors-nvim
+    vimPlugins.nerdtree-git-plugin
+    vimPlugins.vim-nerdtree-tabs
+    vimPlugins.jedi-vim
+    vimPlugins.nvim-autopairs
+    vimPlugins.vim-gitgutter
+    lunarvim
+    wireguard-tools
   ];
 
   fonts.packages = with pkgs; [
