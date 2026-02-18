@@ -80,6 +80,7 @@
     vimPlugins.vim-gitgutter
     lunarvim
     wireguard-tools
+    vial
   ];
 
   fonts.packages = with pkgs; [
