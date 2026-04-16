@@ -13,7 +13,7 @@ in
     ./services.nix
     ./desktop.nix
     ./castom/hugo.nix
-    ./castom/gns3.nix
+    #./castom/gns3.nix
     (import "${home-manager-src}/nixos")
   ];
 

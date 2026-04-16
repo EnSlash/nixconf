@@ -81,6 +81,12 @@
     lunarvim
     wireguard-tools
     vial
+    remmina
+    dia
+    libvisio2svg
+    qwen-code
+    python313Packages.asyncssh
+    element-desktop
   ];
 
   fonts.packages = with pkgs; [

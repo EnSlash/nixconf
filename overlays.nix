@@ -3,9 +3,10 @@
   # Here we can override or add packages.
   # Example: take vscode from unstable
   vscode = unstable.vscode;
-  "code-cursor" = unstable.code-cursor;
+  # code-cursor = unstable.code-cursor;
   "gemini-cli" = unstable.gemini-cli;
   "zoom-us" = unstable.zoom-us;
+  #"gns3-gui" = unstable.gns3-gui;
   winbox4 = unstable.winbox4;
 
   # Your Python package
@@ -16,5 +17,7 @@
     colorama
     aiofiles
     tabulate
+    sip
+    sip4
   ]);
 }
