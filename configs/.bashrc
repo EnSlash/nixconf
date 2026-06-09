@@ -6,7 +6,7 @@ alias c='clear'
 alias upg='sudo nixos-rebuild switch'
 alias l="exa -lag"
 alias kb="setxkbmap -model pc105 -layout us,ru -option grp:alt_shift_toggle"
-
+alias srcmac="/home/iershov/WORK/script/search/main.py"
 
 
 # Для гибридной графики
@@ -14,7 +14,7 @@ export __GL_THREADED_OPTIMIZATIONS=1
 
 if [[ $- == *i* ]]; then
     setxkbmap -model pc105 -layout us,ru -option grp:alt_shift_toggle
-    neofetch
+    fastfetch
 fi
 
 export PATH="$HOME/.local/bin:$PATH"

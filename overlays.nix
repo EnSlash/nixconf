@@ -5,7 +5,7 @@
   vscode = unstable.vscode;
   # code-cursor = unstable.code-cursor;
   "gemini-cli" = unstable.gemini-cli;
-  "zoom-us" = unstable.zoom-us;
+  #"zoom-us" = unstable.zoom-us;
   #"gns3-gui" = unstable.gns3-gui;
   winbox4 = unstable.winbox4;
 

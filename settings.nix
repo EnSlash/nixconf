@@ -5,7 +5,7 @@ let
   unstable = import (fetchTarball "https://github.com/NixOS/nixpkgs/archive/nixpkgs-unstable.tar.gz") {
     config = { allowUnfree = true; allowBroken = true; };
   };
-  home-manager-src = fetchTarball "https://github.com/nix-community/home-manager/archive/release-25.11.tar.gz";
+  home-manager-src = fetchTarball "https://github.com/nix-community/home-manager/archive/release-26.05.tar.gz";
 in
 {
   imports = [
@@ -13,7 +13,7 @@ in
     ./services.nix
     ./desktop.nix
     ./castom/hugo.nix
-    #./castom/gns3.nix
+    #./castom/zoom.nix
     (import "${home-manager-src}/nixos")
   ];
 

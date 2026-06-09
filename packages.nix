@@ -28,7 +28,8 @@
     kdePackages.dolphin
     dig
     python313
-    neofetch
+    #neofetch
+    fastfetch
     openssl
     ipcalc
     tmux
@@ -67,7 +68,7 @@
     btop
     minicom
     yandex-music
-    neovim
+    #neovim
     vimPlugins.nord-vim
     vimPlugins.nvim-scrollview
     vimPlugins.vim-fugitive
@@ -78,7 +79,7 @@
     vimPlugins.jedi-vim
     vimPlugins.nvim-autopairs
     vimPlugins.vim-gitgutter
-    lunarvim
+    #lunarvim
     wireguard-tools
     vial
     remmina
@@ -87,6 +88,7 @@
     qwen-code
     python313Packages.asyncssh
     element-desktop
+    chromium
   ];
 
   fonts.packages = with pkgs; [
