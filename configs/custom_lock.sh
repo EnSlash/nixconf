@@ -8,7 +8,7 @@ SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
 export XSECURELOCK_SAVER="$SCRIPT_DIR/xsecurelock-savers/ultimate_lock_saver.sh"
 
 # Use the X11 auth module for the password prompt.
-export XSECURELOCK_AUTH="/run/current-system/sw/bin/auth_x11"
+export XSECURELOCK_AUTH="/run/current-system/sw/libexec/xsecurelock/auth_x11"
 
 # Show date, time, and keyboard layout.
 export XSECURELOCK_SHOW_DATETIME="1"
@@ -17,6 +17,7 @@ export XSECURELOCK_SHOW_KEYBOARD_LAYOUT="1"
 export XSECURELOCK_SHOW_CAPS_LOCK="1"
 export XSECURELOCK_BACKGROUND_COLOR=#613583
 export XSECURELOCK_AUTH_BACKGROUND_COLOR=#613583
+export XSECURELOCK_IMAGE_PATH="$HOME/git/nixconf/i3/l.jpg"
 # We can customize the prompt colors if desired.
 # export XSECURELOCK_PROMPT_COLOR="#ffffff"
 

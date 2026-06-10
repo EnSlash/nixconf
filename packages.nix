@@ -89,6 +89,8 @@
     python313Packages.asyncssh
     element-desktop
     chromium
+    nh
+    nom
   ];
 
   fonts.packages = with pkgs; [
