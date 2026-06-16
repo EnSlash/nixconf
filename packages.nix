@@ -91,13 +91,26 @@
     chromium
     nh
     nom
+    qmk
+    qmk-udev-rules
+    qmk_hid
+    via
   ];
 
+  services.udev.packages = with pkgs; [
+    vial
+    via
+  ];
   fonts.packages = with pkgs; [
     font-awesome
     nerd-fonts.caskaydia-cove
     dejavu_fonts
   ];
+
+  services.udev.extraRules = ''
+    KERNEL=="hidraw*", SUBSYSTEM=="hidraw", ATTRS{idVendor}=="e126", ATTRS{idProduct}=="0080", MODE="0660", GROUP="users", TAG+="uaccess", TAG+="udev-acl" 
+  '';
+  hardware.keyboard.qmk.enable = true;
 
   programs.gnupg.agent = {
     enable = true;
