@@ -19,7 +19,7 @@
   services.dbus.enable = true;
 
   # Docker
-  virtualisation.docker.enable = true;
+  #virtualisation.docker.enable = true;
 
   # Bluetooth
   hardware.bluetooth.enable = true;

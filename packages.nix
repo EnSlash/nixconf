@@ -53,8 +53,6 @@
     blueman
     bluez-tools
     polybarFull
-    docker
-    docker-compose
     nodejs_24
     onlyoffice-desktopeditors
     vscode
@@ -95,6 +93,7 @@
     qmk-udev-rules
     qmk_hid
     via
+    claude-code
   ];
 
   services.udev.packages = with pkgs; [
