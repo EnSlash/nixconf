@@ -12,7 +12,7 @@
     wget
     curl
     gnupg
-    wofi
+    ulauncher
     htop
     zip
     unzip
@@ -28,7 +28,6 @@
     kdePackages.dolphin
     dig
     python313
-    #neofetch
     fastfetch
     openssl
     ipcalc
@@ -44,10 +43,10 @@
     pavucontrol
     xss-lock
     xautolock
-    xsecurelock
     imagemagick
     flameshot
     feh
+    gsimplecal
     networkmanagerapplet
     pasystray
     blueman
@@ -66,7 +65,6 @@
     btop
     minicom
     yandex-music
-    #neovim
     vimPlugins.nord-vim
     vimPlugins.nvim-scrollview
     vimPlugins.vim-fugitive
@@ -77,7 +75,6 @@
     vimPlugins.jedi-vim
     vimPlugins.nvim-autopairs
     vimPlugins.vim-gitgutter
-    #lunarvim
     wireguard-tools
     vial
     remmina
@@ -94,6 +91,7 @@
     qmk_hid
     via
     claude-code
+    rofi
   ];
 
   services.udev.packages = with pkgs; [
@@ -119,4 +117,14 @@
 
   # Install firefox.
   programs.firefox.enable = true;
+
+  programs.nix-ld.enable = true;
+  programs.nix-ld.libraries = with pkgs; [
+    stdenv.cc.cc.lib   # libstdc++, libgcc_s
+    zlib
+    lz4
+    xz                 # liblzma — erofs-utils это использует
+    libuuid
+    xxHash
+  ];
 }

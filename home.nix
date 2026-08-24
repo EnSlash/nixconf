@@ -21,4 +21,19 @@
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
+
+  # Браузер по умолчанию для xdg-open. Без этого ссылки из внешних приложений
+  # (например, из чатов Zoom) не открываются — нет обработчика http/https.
+  xdg.mimeApps = {
+    enable = true;
+    defaultApplications = {
+      "text/html" = "firefox.desktop";
+      "x-scheme-handler/http" = "firefox.desktop";
+      "x-scheme-handler/https" = "firefox.desktop";
+      "x-scheme-handler/about" = "firefox.desktop";
+      "x-scheme-handler/unknown" = "firefox.desktop";
+    };
+  };
+
+  home.sessionVariables.BROWSER = "firefox";
 }

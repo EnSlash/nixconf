@@ -25,4 +25,8 @@
 
   services.displayManager.defaultSession = "none+i3";
 
+  environment.sessionVariables = {
+    BROWSER = "firefox";
+  };
+
 }

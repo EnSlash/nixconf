@@ -1,3 +1,4 @@
 .env
 backup
 IMPROVEMENTS.md
+cert.pem

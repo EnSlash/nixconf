@@ -19,7 +19,7 @@
   services.dbus.enable = true;
 
   # Docker
-  #virtualisation.docker.enable = true;
+  virtualisation.docker.enable = true;
 
   # Bluetooth
   hardware.bluetooth.enable = true;
@@ -28,7 +28,6 @@
   # Automatic cleanup of old generations
   systemd.services.nix-cleanup = {
     script = ''
-      #!${pkgs.bash}/bin/bash
       # For system profile
       SYSTEM_PROFILE="/nix/var/nix/profiles/system"
       GENS_TO_DELETE_SYSTEM=$(${pkgs.nix}/bin/nix-env --list-generations --profile "$SYSTEM_PROFILE" | ${pkgs.gawk}/bin/awk '{print $1}' | ${pkgs.coreutils}/bin/head -n -10 | ${pkgs.coreutils}/bin/tr '\n' ' ')

@@ -3,21 +3,21 @@
   # Here we can override or add packages.
   # Example: take vscode from unstable
   vscode = unstable.vscode;
-  # code-cursor = unstable.code-cursor;
   "gemini-cli" = unstable.gemini-cli;
-  #zoom-us = unstable.zoom-us;
-  #"gns3-gui" = unstable.gns3-gui;
   winbox4 = unstable.winbox4;
+
+  # Zoom 7.0.0.1666 — вендорный package.nix из nixpkgs@f8a7f3e34c84
+  # + xdg-utils для открытия ссылок из bwrap-sandbox.
+  zoom-us = (self.callPackage ./pkgs/zoom-us.nix { }).override {
+    targetPkgsFixed = [ super.xdg-utils ];
+  };
 
   # Your Python package
   dvPythonEnvTest = unstable.python313.withPackages (ps: with ps; [
-    #ciscoconfparse2
     ntc-templates
     netmiko
     colorama
     aiofiles
     tabulate
-    sip
-    sip4
   ]);
 }
