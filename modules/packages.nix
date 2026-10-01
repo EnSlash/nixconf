@@ -8,7 +8,6 @@
     mtr
     p7zip
     go
-    vim
     wget
     curl
     gnupg
@@ -56,16 +55,6 @@
     btop
     minicom
     yandex-music
-    vimPlugins.nord-vim
-    vimPlugins.nvim-scrollview
-    vimPlugins.vim-fugitive
-    vimPlugins.lightline-vim
-    vimPlugins.tiny-devicons-auto-colors-nvim
-    vimPlugins.nerdtree-git-plugin
-    vimPlugins.vim-nerdtree-tabs
-    vimPlugins.jedi-vim
-    vimPlugins.nvim-autopairs
-    vimPlugins.vim-gitgutter
     wireguard-tools
     vial
     remmina

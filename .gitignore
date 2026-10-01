@@ -6,3 +6,5 @@ cert.pem
 result
 result-*
 CONSOLE_CHEATSHEET.md
+flake.lock
+.flake.nix.swp
