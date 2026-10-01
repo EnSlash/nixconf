@@ -4,19 +4,43 @@
 
 ## 1. Обзор проекта
 
-Проект Nixconf предназначен для управления конфигурациями NixOS и Home Manager. Он содержит следующие основные компоненты:
-- **desktop.nix**: Конфигурация для рабочей среды NixOS.
-- **home.nix**: Конфигурация для Home Manager, определяющая пользовательские пакеты и настройки.
-- **overlays.nix**: Пользовательские оверлеи для пакетов Nix.
-- **packages.nix**: Дополнительные пакеты Nix.
-- **services.nix**: Определения системных служб.
-- **settings.nix**: Общие настройки системы.
-- **castom/**: Пользовательские конфигурации (например, gns3, hugo).
-- **configs/**: Различные файлы конфигурации (например, .bashrc, .tmux.conf).
-- **i3/**: Конфигурация оконного менеджера i3.
-- **polybar/**: Конфигурация и скрипты для Polybar.
+Проект Nixconf предназначен для управления конфигурациями NixOS и Home Manager.
+
+```
+flake.nix              mkHost — фабрика хостов; здесь же перечислены конфигурации
+overlays.nix           пользовательские оверлеи (unstable-пакеты, dvPythonEnvTest)
+hosts/<hostname>/      всё, что специфично для конкретной машины
+  default.nix          подключение конфигурации железа
+  hardware-configuration.nix
+modules/               системная часть NixOS
+  system.nix           загрузчик, локали, пользователь, ssh, настройки nix
+  packages.nix         системные пакеты, шрифты, udev, nix-ld
+  services.nix         pipewire, docker, bluetooth, печать, уборка поколений
+  home.nix             подключение home-manager
+  desktop/
+    default.nix        подключение конфигурации рабочего стола
+    i3.nix             X11, LightDM, i3 и связанные пакеты
+home/                  пользовательская часть (home-manager)
+  default.nix          точка входа пользовательской конфигурации
+  common.nix           общее: bash, tmux, xdg, обёртка zoom
+  i3.nix               дотфайлы i3/polybar + betterlockscreen
+castom/                пакеты с ручным пином версии (hugo, gns3)
+configs/               сырые дотфайлы (.bashrc, .tmux.conf)
+i3/ polybar/           конфиги i3 и polybar
+wallpapers/            обои рабочего стола и экрана блокировки
+```
 
 Основная цель проекта — обеспечить воспроизводимую и декларативную настройку моей системы.
+
+## 1.1. Рабочий стол
+
+Система использует X11, LightDM и оконный менеджер i3. Конфигурация рабочего
+стола, Polybar и Betterlockscreen применяется одной командой вместе с остальной
+системой и Home Manager:
+
+```bash
+sudo nixos-rebuild switch --flake ~/git/nixconf#iershov-ws --impure
+```
 
 ## 2. Стиль кодирования и рекомендации
 

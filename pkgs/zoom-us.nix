@@ -17,7 +17,6 @@
     plasma6XdgDesktopPortalSupport
     || lxqtXdgDesktopPortalSupport
     || gnomeXdgDesktopPortalSupport
-    || hyprlandXdgDesktopPortalSupport
     || wlrXdgDesktopPortalSupport
     || xappXdgDesktopPortalSupport
   ),
@@ -30,9 +29,6 @@
 
   # This is GNOME XDG portal support
   gnomeXdgDesktopPortalSupport ? false,
-
-  # This is Hyprland XDG portal support
-  hyprlandXdgDesktopPortalSupport ? false,
 
   # This is `wlroots` XDG portal support
   wlrXdgDesktopPortalSupport ? false,
@@ -221,7 +217,6 @@ let
       pkgs.xdg-desktop-portal-gnome
       pkgs.xdg-desktop-portal-gtk
     ]
-    ++ lib.optional hyprlandXdgDesktopPortalSupport pkgs.xdg-desktop-portal-hyprland
     ++ lib.optional wlrXdgDesktopPortalSupport pkgs.xdg-desktop-portal-wlr
     ++ lib.optional xappXdgDesktopPortalSupport pkgs.xdg-desktop-portal-xapp
     ++ targetPkgs pkgs

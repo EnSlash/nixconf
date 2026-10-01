@@ -2,3 +2,6 @@
 backup
 IMPROVEMENTS.md
 cert.pem
+.claude/
+result
+result-*

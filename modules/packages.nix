@@ -34,29 +34,20 @@
     tmux
     eza
     alacritty
+    kitty
     asciinema
     zimfw
     wireplumber
-    wlogout
     playerctl
-    nerd-fonts.jetbrains-mono
     pavucontrol
-    xss-lock
-    xautolock
     imagemagick
-    flameshot
-    feh
     gsimplecal
-    networkmanagerapplet
-    pasystray
     blueman
     bluez-tools
-    polybarFull
     nodejs_24
     onlyoffice-desktopeditors
     vscode
     code-cursor
-    gemini-cli
     zoom-us
     winbox4
     dvPythonEnvTest
@@ -91,7 +82,7 @@
     qmk_hid
     via
     claude-code
-    rofi
+    codex
   ];
 
   services.udev.packages = with pkgs; [
@@ -101,6 +92,9 @@
   fonts.packages = with pkgs; [
     font-awesome
     nerd-fonts.caskaydia-cove
+    # Переехал сюда из systemPackages: шрифты из environment.systemPackages
+    # не попадают в fontconfig — `fc-list | grep jetbrains` давал 0.
+    nerd-fonts.jetbrains-mono
     dejavu_fonts
   ];
 
@@ -125,6 +119,6 @@
     lz4
     xz                 # liblzma — erofs-utils это использует
     libuuid
-    xxHash
+    xxhash
   ];
 }

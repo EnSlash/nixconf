@@ -3,7 +3,7 @@
   # Here we can override or add packages.
   # Example: take vscode from unstable
   vscode = unstable.vscode;
-  "gemini-cli" = unstable.gemini-cli;
+  codex = unstable.codex;
   winbox4 = unstable.winbox4;
 
   # Zoom 7.0.0.1666 — вендорный package.nix из nixpkgs@f8a7f3e34c84

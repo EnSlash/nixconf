@@ -1,9 +1,7 @@
-{ config, pkgs, ... }:
+{ config, pkgs, username, ... }:
 {
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
-
-  networking.hostName = "iershov-ws";
 
   time.timeZone = "Asia/Yekaterinburg";
 
@@ -20,20 +18,26 @@
     LC_TIME           = "ru_RU.UTF-8";
   };
 
-  services.xserver.displayManager.lightdm.enable = true;
-
-  users.users.iershov = {
+  users.users.${username} = {
     isNormalUser = true;
-    description  = "iershov";
+    description  = username;
     extraGroups  = [ "networkmanager" "wheel" "docker" ];
   };
-
-  programs.firefox.enable = true;
-  programs.hyprland.enable = true;
 
   services.openssh.enable = true;
 
   security.pki.certificates = [ (builtins.readFile /etc/ssl/certs/cert.pem) ];
 
+  # ─── Nix и базовое окружение (было в settings.nix) ─────────────────────────
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+
+  networking.networkmanager.enable = true;
+  nixpkgs.config.allowUnfree = true;
+
+  boot.kernelParams = [ "acpi=strict" ];
+  environment.pathsToLink = [ "/libexec" ];
+
+  # ВНИМАНИЕ: stateVersion — это версия, на которой систему УСТАНОВИЛИ.
+  # Её нельзя двигать при обновлении NixOS: она гейтит миграции состояния.
   system.stateVersion = "26.05";
 }

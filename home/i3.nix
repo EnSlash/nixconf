@@ -1,16 +1,30 @@
 { config, pkgs, ... }:
 
 let
-  lockWallpaper = ../../i3/lock.jpg;
+  lockWallpaper = ../wallpapers/lock.jpg;
   lockEffects = "dim";
 in
 {
+  home.file.".config/i3/config".source = ../i3/config;
+  home.file.".config/i3/desk.jpg".source = ../wallpapers/desk.jpg;
+
+  home.file.".config/polybar/config.ini".source = ../polybar/config.ini;
+  home.file.".config/polybar/launch.sh" = {
+    source = ../polybar/launch.sh;
+    executable = true;
+  };
+  home.file.".config/polybar/powermenu.sh" = {
+    source = ../polybar/powermenu.sh;
+    executable = true;
+  };
+
+  # ─── Локскрин (был configs/betterlockscreen/betterlockscreen.nix) ──────────
   services.betterlockscreen = {
     enable = true;
-    inactiveInterval = 3;  # минут бездействия до автолока
+    inactiveInterval = 3; # минут бездействия до автолока
     arguments = [
-      "dim"
-      "--show-layout" "0"  # показывать текущий язык на экране блокировки
+      lockEffects
+      "--show-layout" "0" # показывать текущий язык на экране блокировки
       # Всё после "--" передаётся напрямую в i3lock-color.
       # Betterlockscreen не знает флаги i3lock и падает на usage() при их виде.
       "--"
@@ -40,7 +54,7 @@ in
   };
 
   home.activation.betterlockscreenCache =
-    config.lib.dag.entryAfter ["writeBoundary"] ''
+    config.lib.dag.entryAfter [ "writeBoundary" ] ''
       $DRY_RUN_CMD ${pkgs.betterlockscreen}/bin/betterlockscreen -u ${lockWallpaper} --fx ${lockEffects} $VERBOSE_ARG
     '';
 }
