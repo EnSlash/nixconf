@@ -1,6 +1,7 @@
 { unstable }: self: super: {
   # Пакеты, которые должны следовать за nixpkgs-unstable.
   vscode = unstable.vscode;
+  vscodeExtensionsUnstable = unstable.vscode-extensions;
   codex = unstable.codex;
   winbox4 = unstable.winbox4;
 

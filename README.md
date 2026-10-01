@@ -46,6 +46,7 @@ home/                      пользовательские модули Home Ma
   console.nix              Bash, Git и консольные инструменты
   i3.nix                   файлы i3/Polybar и Betterlockscreen
   vim.nix                  Vim, тема, плагины и автодополнение
+  vscode.nix               VS Code и декларативный набор расширений
 
 configs/                   исходные конфигурационные файлы
   bashrc
@@ -72,6 +73,7 @@ docs/                      пользовательская документац
 - системный пакет — `modules/packages.nix`;
 - пользовательский CLI-инструмент — `home/console.nix`;
 - настройка Vim — `home/vim.nix`;
+- расширение VS Code — `home/vscode.nix`;
 - сочетание клавиш i3 — `configs/i3/config`;
 - Polybar — `configs/polybar/`;
 - новый локальный пакет — `pkgs/` и `overlays.nix`;

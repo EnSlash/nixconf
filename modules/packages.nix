@@ -41,7 +41,6 @@
     bluez-tools
     nodejs_24
     onlyoffice-desktopeditors
-    vscode
     code-cursor
     zoom-us
     winbox4

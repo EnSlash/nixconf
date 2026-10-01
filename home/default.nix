@@ -6,5 +6,6 @@
     ./console.nix
     ./i3.nix
     ./vim.nix
+    ./vscode.nix
   ];
 }
