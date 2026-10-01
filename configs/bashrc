@@ -4,7 +4,7 @@ alias hgg='hg annotate'
 alias hgl='hg log'
 alias c='clear'
 alias upg='sudo nixos-rebuild switch --flake /home/iershov/git/nixconf#iershov-ws --impure'
-alias l="exa -lag"
+alias l="eza -lag"
 alias kb="setxkbmap -model pc105 -layout us,ru -option grp:alt_shift_toggle"
 alias srcmac="/home/iershov/WORK/script/search/main.py"
 
@@ -18,4 +18,3 @@ if [[ $- == *i* ]]; then
 fi
 
 export PATH="$HOME/.local/bin:$PATH"
-

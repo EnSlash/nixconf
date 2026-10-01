@@ -15,7 +15,6 @@
     pkgs.mpv
     pkgs.cmatrix
     pkgs.xterm
-    pkgs.dvPythonEnvTest
   ];
 
   # Zoom wrapper: добавляем libxcb-cursor в LD_LIBRARY_PATH для bwrap-sandbox,
@@ -29,7 +28,7 @@
     executable = true;
   };
 
-  home.file.".tmux.conf".source = ../configs/.tmux.conf;
+  home.file.".tmux.conf".source = ../configs/tmux.conf;
 
   # Браузер по умолчанию для xdg-open. Без этого ссылки из внешних приложений
   # (например, из чатов Zoom) не открываются — нет обработчика http/https.

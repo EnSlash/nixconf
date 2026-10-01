@@ -12,14 +12,17 @@
   programs.bash = {
     enable = true;
     enableCompletion = true;
-    historyControl = [ "ignoredups" "ignorespace" ];
+    historyControl = [
+      "ignoredups"
+      "ignorespace"
+    ];
     historySize = 100000;
     historyFileSize = 200000;
 
     # Оставляем пользовательские алиасы и локальные настройки в отдельном файле.
     initExtra = ''
       source ${pkgs.blesh}/share/blesh/ble.sh
-      ${builtins.readFile ../configs/.bashrc}
+      ${builtins.readFile ../configs/bashrc}
     '';
   };
 

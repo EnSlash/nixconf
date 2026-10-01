@@ -1,8 +1,7 @@
-# /home/iershov/git/nixconf/packages.nix
-{ config, pkgs, ... }:
+{ pkgs, ... }:
 
 {
-  # Install soft
+  # Общесистемные приложения и утилиты.
   environment.systemPackages = with pkgs; [
     vlc
     mtr
@@ -20,9 +19,7 @@
     telegram-desktop
     libreoffice
     drawio
-    git
     wireshark
-    zsh
     mercurial
     kdePackages.dolphin
     dig
@@ -35,7 +32,6 @@
     alacritty
     kitty
     asciinema
-    zimfw
     wireplumber
     playerctl
     pavucontrol
@@ -72,6 +68,7 @@
     via
     claude-code
     codex
+    hugo
   ];
 
   services.udev.packages = with pkgs; [
@@ -103,10 +100,10 @@
 
   programs.nix-ld.enable = true;
   programs.nix-ld.libraries = with pkgs; [
-    stdenv.cc.cc.lib   # libstdc++, libgcc_s
+    stdenv.cc.cc.lib # libstdc++, libgcc_s
     zlib
     lz4
-    xz                 # liblzma — erofs-utils это использует
+    xz # liblzma — erofs-utils это использует
     libuuid
     xxhash
   ];
