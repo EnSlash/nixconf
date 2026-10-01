@@ -3,6 +3,18 @@
 let
   marketplaceExtensions = pkgs.vscode-utils.extensionsFromVscodeMarketplace [
     {
+      publisher = "Y-Ysss";
+      name = "cisco-config-highlight";
+      version = "0.9.1";
+      sha256 = "0dlfq4l5aid2fykmirzb45jxvmd9lyq8hb7h8dcd90f60aslp2na";
+    }
+    {
+      publisher = "CusanzaBros";
+      name = "vscode-net-tools";
+      version = "1.7.0";
+      sha256 = "0pd3npfi8b0sfgsdcfc4bgk7ahcw18by2qd9mw6r4cl51brqxx29";
+    }
+    {
       publisher = "jheilingbrunner";
       name = "vscode-gnupg-tool";
       version = "1.4.2";
