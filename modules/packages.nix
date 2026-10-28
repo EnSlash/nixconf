@@ -65,9 +65,10 @@
     qmk-udev-rules
     qmk_hid
     via
-    claude-code
     codex
+    opencode
     hugo
+    openscad
   ];
 
   services.udev.packages = with pkgs; [

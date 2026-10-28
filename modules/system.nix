@@ -43,12 +43,16 @@
     "flakes"
   ];
 
-  networking.networkmanager.enable = true;
+  networking.networkmanager = {
+    enable = true;
+    # WireGuard поддерживается встроенно, OpenVPN требует плагин для GUI.
+    plugins = [ pkgs.networkmanager-openvpn ];
+  };
   nixpkgs.config.allowUnfree = true;
 
   boot.kernelParams = [ "acpi=strict" ];
   environment.pathsToLink = [ "/libexec" ];
-
+  networking.firewall.checkReversePath = "loose";
   # ВНИМАНИЕ: stateVersion — это версия, на которой систему УСТАНОВИЛИ.
   # Её нельзя двигать при обновлении NixOS: она гейтит миграции состояния.
   system.stateVersion = "26.05";

@@ -24,6 +24,16 @@ nix flake check --impure --no-build
 nix flake update
 ```
 
+## Удалённый доступ и VPN
+
+- **Remmina** — RDP-клиент для подключения к Windows.
+- **WireGuard** — импорт `.conf` через `nm-connection-editor` → «+» →
+  «Import a saved VPN configuration».
+- **OpenVPN** — импорт `.ovpn` через тот же редактор; плагин NetworkManager
+  подключён в конфигурации системы.
+
+Включать и отключать VPN можно через сетевой апплет `nm-applet` в трее.
+
 ## Структура
 
 ```text

@@ -8,6 +8,7 @@ alias l="eza -lag"
 alias kb="setxkbmap -model pc105 -layout us,ru -option grp:alt_shift_toggle"
 alias srcmac="/home/iershov/WORK/script/search/main.py"
 
+CPLUS_API_KEY="db40f36521867ffd278712c2023bfdef967f868fc28ab2bab70967bb43d70a99"
 
 # Для гибридной графики
 export __GL_THREADED_OPTIMIZATIONS=1

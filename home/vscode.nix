@@ -70,6 +70,7 @@ in
         donjayamanne.githistory
         eamodio.gitlens
         jnoortheen.nix-ide
+        kilocode.kilo-code
         mads-hartmann.bash-ide-vscode
         mechatroner.rainbow-csv
         mhutchie.git-graph
