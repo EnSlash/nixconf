@@ -1,4 +1,6 @@
-alias confgw='cd ~/WORK/Config/ && ./get-gpg.sh && ./unpack-gpg.sh gpg/asa-5520-cp.tar.gpg && ./unpack-gpg.sh gpg/dell-sw-1.tar.gpg && ./unpack-gpg.sh gpg/dell-sw-2.tar.gpg && ./unpack-gpg.sh gpg/esr1.tar.gpg && ./unpack-gpg.sh gpg/esr2.tar.gpg'
+alias confgw='cd ~/WORK/Config/ && ./get-gpg.sh && ./unpack-gpg2.sh gpg'
+alias confgw-pc='cd ~/WORK/Config/ && ./get-gpg-pc.sh && ./unpack-gpg2.sh gpg'
+
 alias s='sudo'
 alias hgg='hg annotate'
 alias hgl='hg log'
